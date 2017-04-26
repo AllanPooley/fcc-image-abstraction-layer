@@ -17,12 +17,17 @@ app.get('/', function(req, res) {
 
 
 
-app.get('/imagesearch/:target*', function(req, res) {
+app.get('/imagesearch/:term*', function(req, res) {
   
   // Get search term
+  var searchTerm = req.params.term
+  
   // Get ?offset = query string value.
+  var offset = 0;
+  if (req.query['offset'])
+    offset = parseInt(req.query['offset']);
   
-  
+  res.send({ 'term': searchTerm, 'offset': offset});
   
 });
 
