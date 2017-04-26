@@ -1,0 +1,31 @@
+{
+  "name": "image-searcher",
+  "version": "1.0.0",
+  "description": "A simple API service that can perform a search for images that are related to a given search phrase. Results are given in JSON format.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanPooley/fcc-image-abstraction-layer.git"
+  },
+  "keywords": [
+    "image",
+    "search",
+    "node",
+    "express",
+    "freecodecamp"
+  ],
+  "author": "Allan Pooley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AllanPooley/fcc-image-abstraction-layer/issues"
+  },
+  "homepage": "https://github.com/AllanPooley/fcc-image-abstraction-layer#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "pug": "^2.0.0-beta.12"
+  }
+}
