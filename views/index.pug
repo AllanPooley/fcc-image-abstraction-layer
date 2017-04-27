@@ -17,12 +17,15 @@ html
             h2.heading Example API Calls
             div.text-block
                 p.code https://image-seeker.glitch.me/search/wizards?offset=1
-                p.code https://image-seeker.glitch.me/history
                 
             h2.heading Example Response
             div.text-block
-                p.code [{"url":"https://static.wixstatic.com/media/1792ca_3946adc8643ffa516d4a3e40f4d58e27.jpg_srz_940_752_85_22_0.50_1.20_0.00_jpg_srz","snippet":"Wizards of Wizard Quest","thumbnail":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQQyv_H57d2SnjpNqW5qRkfGY_b4PPvHlLGSuf0URmkbbvVmflJAJ0-AtsT","context":"https://www.wizardquest.com/thewizards"}, ....... ]
-                p.code [[{"term":"wizards","when":"2017-04-26T03:37:03.978Z"}, ....]
+                p.code [{"url":"https://www.thesorceryblog.com/powerfulwizard.jpg", "snippet":"Wizards of Wizard Quest", "thumbnail":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQQyv", "context":"https://www.thesorceryblog.com"}, <br /><br /> ....... <br /><br />#[em and 9 more relevant images]<br /><br /> ....... ]
+            
+            h2.heading Search History
+            div.text-block
+                p.text Yep, you can also check out what all those other internet weirdos have been searching. Just hit:</br></br>
+                p.code https://image-seeker.glitch.me/history
                 
     script(src="https://code.jquery.com/jquery-2.2.1.min.js", integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=", crossorigin="anonymous")
     script(src='/client.js')
