@@ -24,8 +24,10 @@
   },
   "homepage": "https://github.com/AllanPooley/fcc-image-abstraction-layer#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
-    "pug": "^2.0.0-beta.12"
+    "pug": "^2.0.0-beta.12",
+    "request": "^2.81.0"
   }
 }
