@@ -6,22 +6,25 @@ var https = require('https');
 var request = require('request');
 var MongoClient = require('mongodb').MongoClient;
 
+require('dotenv').config();
+
 // TODO: 
-// --> Comment code
-// --> Get ride of api keys, user creds, move them to process.env variables.
+// --> Comment code [done]
+// --> Get ride of api keys, user creds, move them to process.env variables. [done]
 // --> Seperate code into neater sub files.
 // --> Research mapping?
 
 const PORT = 8080;
 const CSE_URL = 'https://www.googleapis.com/customsearch/v1';
 const CSE_SEARCH = 'image';
-const CSE_CX = '005854168553956312373:rcwxvmrc8y8';
-const CSE_KEY = 'AIzaSyCVbEX1KZJ9l7sceU7r1euXo_B82opZg9o';
+const CSE_CX = process.env.CSE_CX
+const CSE_KEY = process.env.CSE_KEY
 const RESULTS_PER_PAGE = 10;
 
 const DB_NAME = 'image-seeker';
-const DB_USER = 'quincy';
-const DB_PASS = 'larson';
+const DB_USER = process.env.DB_USER;
+const DB_PASS = process.env.DB_PASS;
+
 var DB_URL = 'mongodb://' + DB_USER + ':' + DB_PASS + '@ds123361.mlab.com:23361/' + DB_NAME;
 const DB_COLLECTION_NAME = 'history';
 
