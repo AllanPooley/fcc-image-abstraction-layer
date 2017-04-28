@@ -1,6 +1,7 @@
 ## Synopsis
 
 A simple API service that can perform a search for images that are related to a given search phrase. Results are given in JSON format.
+
 ## API Usage
 
 `https://image-seeker.glitch.me/search/wizards?offset=1`
