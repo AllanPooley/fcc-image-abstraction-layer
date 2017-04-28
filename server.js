@@ -8,12 +8,6 @@ var MongoClient = require('mongodb').MongoClient;
 
 require('dotenv').config();
 
-// TODO: 
-// --> Comment code [done]
-// --> Get ride of api keys, user creds, move them to process.env variables. [done]
-// --> Seperate code into neater sub files.
-// --> Research mapping?
-
 const PORT = 8080;
 const CSE_URL = 'https://www.googleapis.com/customsearch/v1';
 const CSE_SEARCH = 'image';
