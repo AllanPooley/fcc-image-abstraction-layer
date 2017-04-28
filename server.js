@@ -74,7 +74,13 @@ app.get('/search/:search*', function(req, res) {
 
 app.get('/history', function(req, res) {
   
-  res.send(getRecentSearch());
+  getRecentSearch(function(recentHistoryArr) {
+    
+    if (recentHistoryArr)
+      res.send(recentHistoryArr);
+    else 
+      res.send({error: "Unable to retrieve history."});
+  });
   
 });
 
@@ -161,16 +167,21 @@ function saveSearch(query) {
 
 // Retrieves saved search history from the database, returning the most recently
 // saved documents.
-function getRecentSearch(){
-  db.collection(DB_COLLECTION_NAME).find().toArray(function(err, result) {
-    if (err) return console.log(err);
-    
-    if (result.length >= 10) {
-      result = result.slice(result.length - 10);
+function getRecentSearch(callback){
+  db.collection(DB_COLLECTION_NAME).find({}, { term: 1, when: 1, _id: 0 }).toArray(function(err, result) {
+    if (err) {
+      console.log(err);
+      callback(null);
+    } else {
+      if (result.length >= 10) {
+        result = result.slice(result.length - 10);
+      }
+      console.log("Recent Searches: ");
+      console.log (result);
+      callback(result);
     }
-    console.log("Recent Searches: ");
-    console.log (result);
-    return result;
+    
+    
   });
 }
 
